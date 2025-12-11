@@ -76,14 +76,9 @@ function AddPlant() {
           <input name="fertilizing" type="number" min="1" placeholder="e.g. 30" />
         </label>
 
-        <label>
-          Image URL (optional)
-          <input name="image" type="text" placeholder="http://..." />
-        </label>
-
         <div className="form-actions">
           <button type="submit" className="btn">Save Plant</button>
-          <NavLink to="/dashboard" className="btn secondary">Back to Dashboard</NavLink>
+          <NavLink to="/" className="btn secondary">Back to Dashboard</NavLink>
         </div>
       </form>
     </div>
