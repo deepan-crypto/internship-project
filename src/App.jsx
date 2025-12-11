@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./Common/Header.jsx";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   let [data, setData] = useState([]);
@@ -22,6 +24,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
       <Outlet
         context={{
           data,

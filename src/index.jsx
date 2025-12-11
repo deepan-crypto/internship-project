@@ -20,6 +20,10 @@ const router = createBrowserRouter([
          path: "/", 
          element: <DashBoard /> 
         },
+        {
+          path:"/Login",
+          element:<Login/>
+        },
       { 
         path: "/addplant", 
         element: <AddPlant /> 
