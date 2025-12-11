@@ -8,6 +8,7 @@ import PlantDetails from "./pages/PlantDetails.jsx";
 import ActivityHistory from "./pages/ActivityHistory.jsx";
 import Reminders from "./pages/Reminders.jsx";
 import UserProfile from "./pages/Userprofile.jsx";
+import Login from "./pages/Login";
 
 import "./index.css";
 
