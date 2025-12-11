@@ -1,8 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Styles/Dashboard.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Dashboard = () => {
+
+    const [plants, setPlants] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPlants = async () => {
+      try {
+        const res = await fetch("/plant.json");
+        const data = await res.json();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchPlants();
+  }, []);
   return (
     <div className="dash-page">
       <h2 className="title">Dashboard</h2>
