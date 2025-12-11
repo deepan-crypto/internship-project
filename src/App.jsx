@@ -11,11 +11,16 @@ function App() {
   useEffect(() => {
     const fetchplantdata = async () => {
       try {
-        const response = await fetch("http://localhost:5173/plant.json");
+        // use a relative path so the dev server serves the public file reliably
+        const response = await fetch("/plant.json");
+        if (!response.ok) {
+          throw new Error(`Failed to fetch /plant.json: ${response.status} ${response.statusText}`);
+        }
         const da = await response.json();
         setData(da);
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching plant data:", err);
+        setData([]); // fallback to empty array
       }
     };
     fetchplantdata();

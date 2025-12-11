@@ -22,7 +22,7 @@ const router = createBrowserRouter([
          element: <DashBoard /> 
         },
         {
-          path:"/Login",
+          path:"/login",
           element:<Login/>
         },
       { 
